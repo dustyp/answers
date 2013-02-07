@@ -1,0 +1,217 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Momapedia - Question</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+    <link rel="stylesheet" href="/styles/ratchet.css"/>
+    <link rel="stylesheet" href="/styles/junior.css"/>
+    <link rel="stylesheet" href="/styles/answers.css"/>
+    <link rel="stylesheet" href="/styles/font-awesome.min.css"/>
+
+
+    <style>
+        .question-item{
+            margin-left:0 !important;
+            padding-left:0 !important;
+        }
+        .answer-line{
+            text-align: center;
+            width:10px;
+        }
+        .answer-cnt{
+            font-size: 12px;
+        }
+        .vote{
+            margin-left:-1px;
+        }
+        .up-vote{
+            margin-bottom:-3px;
+            color:#656565
+        }
+        .down-vote{
+            margin-top:-12px;
+            color:#bbb
+        }
+        .body-text{
+            font-size:10pt;
+            color:black;
+        }
+        .tag{
+            padding-bottom:8px;
+        }
+        .question{
+            margin-left:22px;
+        }
+        .content{
+            padding-bottom:50px;
+        }
+        .answer-btn{
+            display:inline;
+            float:right
+        }
+        .answer-header-cnt{
+            color:white;
+            position: relative;
+            top:7px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="app-container">
+    <div id="app-main">
+        <div class="content">
+            <header class="junior-intro" style="text-align: center">
+                <div style="float:left"><a class="button-prev" href="/web/questions"><i class="icon-arrow-left"></i> Back</a></div>
+                <img src="/images/bc_logo_30px.png"/>
+                <a class="button" style="float:right" id="search-toggle"><i class="icon-search"></i></a>
+                <div style="clear:both"></div>
+            </header>
+            <div id="search">
+                <div id="search-field">
+                    <input type="text" placeholder="Search">
+                </div>
+                <div id="search-button"><a class="button">Go</a></div>
+            </div>
+            <ul class="list" id="question-list">
+                <li class="question-item">
+                    <div class="answer-line">
+                        <div class="up-vote vote"><i class="icon-caret-up icon-2x"></i></div>
+                        <div class="answer-cnt">88</div>
+                        <div class="down-vote vote"><i class="icon-caret-down icon-2x"></i></div>
+                    </div>
+
+                    <div class="question-body">
+                        <a href="#">How long after a miscarriage does it take for your HCG levels to return to
+                            normal?</a>
+
+                        <div class="tag">
+                            <button class="baby">baby</button> <button class="baby">hormones</button>
+                        </div>
+                    </div>
+                    <div class="body-text question">
+                        I had a miscarriage about 7 weeks ago. I had a feeling and took a pregnancy test today. It was positive. Is it possible that the test was just detecting left-over pregnancy hormones?
+                    </div>
+                    <div class="author-block">
+                        <div class="authored-time">Posted 12-Feb-2012 12:12PM</div>
+                        <div class="author-img"><img src="/images/profile1.png" height="30" width="30"/></div>
+                        <div class="author-name">Beth Sordi</div>
+                        <div class="author-reputation">12,222</div>
+                    </div>
+                    <div style="clear:both"></div>
+                </li>
+            </ul>
+            <header class="junior-intro" style="text-align:left">
+                <span class="answer-header-cnt">7 Answers</span>
+                <div class="answer-btn"><a class="button" href="#answer"></i>Answer</a></div>
+                <div style="clear:both"></div>
+            </header>
+            <ul class="list" id="question-list">
+                <li class="question-item">
+                    <div class="answer-line">
+                        <div class="up-vote vote"><i class="icon-caret-up icon-2x"></i></div>
+                        <div class="answer-cnt">19 </div>
+                        <div class="down-vote vote"><i class="icon-caret-down icon-2x"></i></div>
+                    </div>
+
+                    <div class="question-body">
+                        <div class="body-text answer">
+                            Not true all the time. I had a miscarriage, and 2 weeks later ovulated and became pregnant. I read that your HCG levels have to go back down to 0 for you to even ovulate. The doctors thought I was pregnant due to remnants too, but had my blood taken and at 3 weeks pregnant, they were over 250. I am also having twins!
+                        </div>
+                    </div>
+
+                    <div class="author-block">
+                        <div class="authored-time">Answered 12-Feb-2012 12:12PM</div>
+                        <div class="author-img"><img src="/images/profile1.png" height="30" width="30"/></div>
+                        <div class="author-name">Beth Sordi</div>
+                        <div class="author-reputation">12,222</div>
+                    </div>
+                    <div style="clear:both"></div>
+                </li>
+                <li class="question-item">
+                    <div class="answer-line">
+                        <div class="up-vote vote"><i class="icon-caret-up icon-2x"></i></div>
+                        <div class="answer-cnt">3</div>
+                        <div class="down-vote vote"><i class="icon-caret-down icon-2x"></i></div>
+                    </div>
+
+                    <div class="question-body">
+                        <div class="body-text answer">
+                           I  found out on April 28 that I was pregnant. On May 9, I miscarried (Mother's day...how cruel, right?). At the hospital, my HCG levels were only 400. A few days later, 67; then finally down to 4 on May 19. My dr said once the hormones were gone, I would get my period and after one cycle, we could start trying again. By June 6 (4 weeks later), I still did not get a period so I took a test and it was positive. I figured it could not be leftover hormones because they were down to 4 and need to be 25 for a positive test result. I went the next day for blood work and the levels were 200. I had another test yesterday and the levels are over 4500 now. In my case, I must have ovulated within a week or 2 of the miscarriage b/c based on my HCG levels, I'm about 3 or 4 weeks along now and the miscarriage was only 5 weeks ago. Now I'm keeping my fingers crossed that everything will be ok this time around.
+                        </div>
+                    </div>
+
+                    <div class="author-block">
+                        <div class="authored-time">Answered 12-Feb-2012 12:12PM</div>
+                        <div class="author-img"><img src="/images/profile1.png" height="30" width="30"/></div>
+                        <div class="author-name">Beth Sordi</div>
+                        <div class="author-reputation">12,222</div>
+                    </div>
+                    <div style="clear:both"></div>
+                </li>
+            </ul>
+            <div class="answer-entry-form">
+                <form>
+                    <a name="answer"></a>
+                    <h3>Your Answer</h3>
+                    <textarea rows="5" placeholder="Enter your answer"></textarea>
+                    <a class="button" href="/web/questions">Submit</a>
+                </form>
+            </div>
+        </div>
+
+        <nav class="bar-tab" style="position:fixed;margin-top:30px;">
+            <ul class="tab-inner">
+                <li class="tab-item active">
+                    <a href="/web/questions">
+                        <i class="icon-comments"></i>
+
+                        <div class="tab-label">Questions</div>
+                    </a>
+                </li>
+                <li class="tab-item">
+                    <a href="/web/questions">
+                        <i class="icon-folder-close"></i>
+
+                        <div class="tab-label">Tags</div>
+                    </a>
+                </li>
+                <li class="tab-item">
+                    <a href="/web/questions">
+                        <i class="icon-question-sign"></i>
+
+                        <div class="tab-label">My Questions</div>
+                    </a>
+                </li>
+                <li class="tab-item">
+                    <a href="/web/questions">
+                        <i class="icon-angle-right"></i>
+
+                        <div class="tab-label">More</div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+<!-- Scripts -->
+<script src="/scripts/junior/modernizr.custom.15848.js"></script>
+<script src="/scripts/junior/zepto.min.js"></script>
+<script src="/scripts/junior/zepto.flickable.min.js"></script>
+<script src="/scripts/junior/lodash.min.js"></script>
+<script src="/scripts/junior/backbone-min.js"></script>
+<script src="/scripts/junior/junior.js"></script>
+<script src="http://twitter.github.com/hogan.js/builds/2.0.0/hogan-2.0.0.js"></script>
+<script src="/scripts/junior/answers-global.js"></script>
+</body>
+
+</html>
